@@ -52,6 +52,8 @@
                                                 <td class="text-center">
                                                     <a href="{{ route('alat.edit', $alat) }}"
                                                         class="btn btn-warning btn-sm rounded-0">Edit</a>
+                                                    <a href="{{ route('alat.show', $alat) }}"
+                                                        class="btn btn-info btn-sm rounded-0" target="_blank">Barcode</a>
                                                 </td>
                                             </tr>
                                         @endforeach

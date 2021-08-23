@@ -55,9 +55,11 @@ class AlatController extends Controller
         return redirect()->route('alat.index')->with('toast_success', 'Berhasil Menambahkan Alat Laboratorium');
     }
 
-    public function show($id)
+    public function show(Alat $alat)
     {
-        //
+        return view('app.alat.show', [
+            'alat' => $alat,
+        ]);
     }
 
     public function edit($id_alat)

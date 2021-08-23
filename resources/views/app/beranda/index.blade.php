@@ -22,10 +22,9 @@
                             </span>
 
                             <div class="info-box-content">
-                                <span class="info-box-text">Peminjaman</span>
+                                <span class="info-box-text">Peminjaman Baru</span>
                                 <span class="info-box-number">
-                                    10
-                                    <small>%</small>
+                                    {{ $total_proses_peminjaman }}
                                 </span>
                             </div>
                             <!-- /.info-box-content -->
@@ -39,8 +38,8 @@
                                 <i class="fas fas fa-clock"></i>
                             </span>
                             <div class="info-box-content">
-                                <span class="info-box-text">Jadwal Praktek Hari Ini</span>
-                                <span class="info-box-number">41,410</span>
+                                <span class="info-box-text">Peminjaman</span>
+                                <span class="info-box-number">{{ $total_peminjaman }}</span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
@@ -59,7 +58,7 @@
 
                             <div class="info-box-content">
                                 <span class="info-box-text">Siswa</span>
-                                <span class="info-box-number">760</span>
+                                <span class="info-box-number">{{ $total_siswa }}</span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>
@@ -74,7 +73,7 @@
 
                             <div class="info-box-content">
                                 <span class="info-box-text">Guru</span>
-                                <span class="info-box-number">2,000</span>
+                                <span class="info-box-number">{{ $total_guru }}</span>
                             </div>
                             <!-- /.info-box-content -->
                         </div>

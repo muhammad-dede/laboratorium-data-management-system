@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Guru;
+use App\Models\JadwalPraktek;
+use App\Models\Peminjaman;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 
 class BerandaController extends Controller
@@ -20,6 +24,10 @@ class BerandaController extends Controller
             'title' => 'Beranda',
             'menu' => 'beranda',
             'sub_menu' => 'beranda',
+            'total_proses_peminjaman' => Peminjaman::where('kode_status', '!=', 4)->count(),
+            'total_peminjaman' => Peminjaman::where('kode_status', '=', 4)->count(),
+            'total_siswa' => Siswa::count(),
+            'total_guru' => Guru::count(),
         ];
         return view('app/beranda/index', $data);
     }

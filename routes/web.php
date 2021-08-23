@@ -66,7 +66,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('/siswa', SiswaController::class, ['except' => ['show', 'destroy']]);
         Route::resource('/jadwal-praktek', JadwalPraktekController::class, ['except' => ['show', 'destroy']]);
         Route::resource('/rak', RakController::class, ['except' => ['show', 'destroy']]);
-        Route::resource('/alat', AlatController::class, ['except' => ['show', 'destroy']]);
+        Route::resource('/alat', AlatController::class, ['except' => ['destroy']]);
         Route::resource('/peminjaman', PeminjamanController::class, ['except' => ['destroy']]);
         Route::put('/peminjaman/update-status/{status}/{peminjaman}', [PeminjamanController::class, 'update_status'])->name('peminjaman.update_status');
         Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
